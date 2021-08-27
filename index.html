@@ -5,8 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bérkalkulátor</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main>
+        <section id="sectionA">
+            <h2>Bérkalkulátor 2021</h2>
+            <ul>
+                <li>Nettó</li>
+                <li>Bruttó</li>
+                <li>Össz. költség</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>Gyermekek száma</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>Kedvezmény</li>
+            </ul>
+            <hr>
+            <ul class="checkboxFlex">
+                <li>Első házas</li>
+                <label class="switch">
+                    <input type="checkbox" id="checkHazas">
+                    <span class="slider round"></span>
+                </label>
+            </ul>
+            <hr>
+            <ul class="checkboxFlex">
+                <li>Súlyos fogyatékos</li>
+                <label class="switch">
+                    <input type="checkbox" id="checkFogyatekos">
+                    <span class="slider round"></span>
+                </label>
+            </ul>
+            <hr>
+            <ul class="checkboxFlex">
+                <li>Nyugdíjas</li>
+                <label class="switch">
+                    <input type="checkbox" id="checkNyugdijas">
+                    <span class="slider round"></span>
+                </label>
+            </ul>
+        </section>
+        <section id="sectionB">
+            <h2>Munkavállalói oldal</h2>
+            <ul>
+                <li>Havi bruttó jövedelem</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>Személyi jövedelemadó</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>Társadalombiztosítási járulék</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>Munkavállalói levonások összesen</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>Éves számított adóalap</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>Éves számított adó</li>
+            </ul>
+        </section>
+        <section id="sectionC">
+            <h2>Munkáltatói oldal</h2>
+            <ul>
+                <li>Munkáltató össz. bérköltsége</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>Szociális hozzájárulási adó</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>Szakképzési hozzájárulás</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>Munkáltatói járulékok összesen</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>Bruttó bér</li>
+            </ul>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>  
 </body>
 </html>
