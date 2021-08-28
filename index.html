@@ -11,91 +11,107 @@
     <main>
         <section id="sectionA">
             <h2>Bérkalkulátor 2021</h2>
-            <ul>
-                <li>Nettó</li>
-                <li>Bruttó</li>
-                <li>Össz. költség</li>
-            </ul>
+            <div>
+                <div class="styld">
+                    <form  class="checkboxFlex" id="testForm" oninput="calcNetto()">
+                        <label for="bruttoValue">Bruttó</label>
+                        <input id="bruttoValue" type="number">
+                    </form>
+                </div>
+
+
+
+                <div class="checkboxFlex styld">
+                    <p>Nettó</p>
+                    <p id="nettoValue">0 Ft</p>
+                </div>
+                
+                
+                <div class="checkboxFlex styld">
+                    <p>Össz. költség</p>
+                    <p id="osszkoltsegValue">0 Ft</p>
+                </div>
+            </div>
             <hr>
-            <ul>
-                <li>Gyermekek száma</li>
-            </ul>
+            <div class="styld">
+                <p>Gyermekek száma</p>
+            </div>
             <hr>
-            <ul>
-                <li>Kedvezmény</li>
-            </ul>
+            <div class="styld">
+                <p>Kedvezmény</p>
+            </div>
             <hr>
-            <ul class="checkboxFlex">
-                <li>Első házas</li>
+            <div class="checkboxFlex styld">
+                <p>Első házas</p>
                 <label class="switch">
                     <input type="checkbox" id="checkHazas">
                     <span class="slider round"></span>
                 </label>
-            </ul>
+            </div>
             <hr>
-            <ul class="checkboxFlex">
-                <li>Súlyos fogyatékos</li>
+            <div class="checkboxFlex styld">
+                <p>Súlyos fogyatékos</p>
                 <label class="switch">
                     <input type="checkbox" id="checkFogyatekos">
                     <span class="slider round"></span>
                 </label>
-            </ul>
+            </div>
             <hr>
-            <ul class="checkboxFlex">
-                <li>Nyugdíjas</li>
+            <div class="checkboxFlex styld">
+                <p>Nyugdíjas</p>
                 <label class="switch">
                     <input type="checkbox" id="checkNyugdijas">
                     <span class="slider round"></span>
                 </label>
-            </ul>
+            </div>
         </section>
         <section id="sectionB">
             <h2>Munkavállalói oldal</h2>
-            <ul>
-                <li>Havi bruttó jövedelem</li>
-            </ul>
+            <div class="styld">
+                <p>Havi bruttó jövedelem</p>
+            </div>
             <hr>
-            <ul>
-                <li>Személyi jövedelemadó</li>
-            </ul>
+            <div class="styld">
+                <p>Személyi jövedelemadó</p>
+            </div>
             <hr>
-            <ul>
-                <li>Társadalombiztosítási járulék</li>
-            </ul>
+            <div class="styld">
+                <p>Társadalombiztosítási járulék</p>
+            </div>
             <hr>
-            <ul>
-                <li>Munkavállalói levonások összesen</li>
-            </ul>
+            <div class="styld">
+                <p>Munkavállalói levonások összesen</p>
+            </div>
             <hr>
-            <ul>
-                <li>Éves számított adóalap</li>
-            </ul>
+            <div class="styld">
+                <p>Éves számított adóalap</p>
+            </div>
             <hr>
-            <ul>
-                <li>Éves számított adó</li>
-            </ul>
+            <div class="styld">
+                <p>Éves számított adó</p>
+            </div>
         </section>
         <section id="sectionC">
             <h2>Munkáltatói oldal</h2>
-            <ul>
-                <li>Munkáltató össz. bérköltsége</li>
-            </ul>
+            <div class="styld">
+                <p>Munkáltató össz. bérköltsége</p>
+            </div>
             <hr>
-            <ul>
-                <li>Szociális hozzájárulási adó</li>
-            </ul>
+            <div class="styld">
+                <p>Szociális hozzájárulási adó</p>
+            </div>
             <hr>
-            <ul>
-                <li>Szakképzési hozzájárulás</li>
-            </ul>
+            <div class="styld">
+                <p>Szakképzési hozzájárulás</p>
+            </div>
             <hr>
-            <ul>
-                <li>Munkáltatói járulékok összesen</li>
-            </ul>
+            <div class="styld">
+                <p>Munkáltatói járulékok összesen</p>
+            </div>
             <hr>
-            <ul>
-                <li>Bruttó bér</li>
-            </ul>
+            <div class="styld">
+                <p>Bruttó bér</p>
+            </div>
         </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

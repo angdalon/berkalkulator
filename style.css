@@ -9,7 +9,7 @@ main {
 }
 
 #sectionA, #sectionB, #sectionC {
-    width: 500px;
+    width: 700px;
     height: 750px;
     text-align: center;
     border: 5px solid grey;
@@ -19,6 +19,9 @@ main {
 
 }
 
+#sectionA p, #sectionB p, #sectionC p {
+    margin: 3px 0px;
+}
 
 #sectionA h2, #sectionB h2, #sectionC h2 {
     padding: 50px 0px;
@@ -27,23 +30,26 @@ main {
 
 }
 
-#sectionA ul, #sectionB ul, #sectionC ul {
+
+
+.styld {
     text-align: left;
-    list-style: none;
     font-size: 20px;
     color:rgba(143, 110, 49, 0.692);
     padding-left: 40px;
     padding-right: 40px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
-#sectionA li {
-    padding-top: 5px;
-}
+
+
+
 
 
 #sectionA hr, #sectionB hr, #sectionC hr {
     border-bottom: 1px solid rgba(143, 110, 49, 0.692);
-    width: 85%;
+    width: 90%;
 }
 
 
