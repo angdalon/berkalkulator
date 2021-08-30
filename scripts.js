@@ -17,19 +17,44 @@ let calcNetto = () => {
 */
 
 
-let calcNetto = () => {
-    $('#nettoValue').text(parseInt(bruttoValue.value)*parseFloat(0.665) + " Ft");
-    $('#osszkoltsegValue').text(parseInt(bruttoValue.value)*parseFloat(1.17) + " Ft");
+let calcValues = () => {
+    if(document.forms["testForm"]["bruttoValue"].value != "") {
 
-    $('#havibruttoValue').text(parseInt(bruttoValue.value) + " Ft");
-    $('#szjaValue').text(parseInt(bruttoValue.value)*parseFloat(0.15) + " Ft");
-    $('#tbValue').text(parseInt(bruttoValue.value)*parseFloat(0.185) + " Ft");
-    $('#munkavallaloiadokValue').text(parseInt($("#szjaValue").text())+parseInt($("#tbValue").text()) + " Ft");
-    $('#evesadoalapValue').text(parseInt(bruttoValue.value)*12 + " Ft");
-    $('#evesszamitottadoValue').text(parseInt($("#szjaValue").text())*12 + " Ft");
+        $('#nettoValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.665)) + " Ft");
+        $('#osszkoltsegValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(1.17)) + " Ft");
+
+        $('#havibruttoValue').text(parseInt(bruttoValue.value) + " Ft");
+        $('#szjaValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.15)) + " Ft");
+        $('#tbValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.185)) + " Ft");
+        $('#munkavallaloiadokValue').text(parseInt($("#szjaValue").text())+parseInt($("#tbValue").text()) + " Ft");
+        $('#evesadoalapValue').text(parseInt(parseInt(bruttoValue.value)*12) + " Ft");
+        $('#evesszamitottadoValue').text(parseInt(parseInt($("#szjaValue").text())*12) + " Ft");
+    } else {
+        $("#nettoValue").text("0 Ft");
+        $("#osszkoltsegValue").text("0 Ft");
+
+        $("#havibruttoValue").text("0 Ft");
+        $("#szjaValue").text("0 Ft");
+        $("#tbValue").text("0 Ft");
+        $("#munkavallaloiadokValue").text("0 Ft");
+        $("#evesadoalapValue").text("0 Ft");
+        $("#evesszamitottadoValue").text("0 Ft");
+
+        
+   
+}
+
 };
 
 
+/*
+
+    else {
+        $("#bruttoValue").val(0);
+        
+   
+}
+*/
 
 
 /*

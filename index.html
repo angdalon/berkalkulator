@@ -13,9 +13,9 @@
             <h2>Bérkalkulátor 2021</h2>
             <div>
                 <div class="styld">
-                    <form  class="checkboxFlex" id="testForm" oninput="calcNetto()">
+                    <form  class="checkboxFlex" id="testForm" oninput="calcValues()">
                         <label for="bruttoValue">Bruttó</label>
-                        <input id="bruttoValue" type="number">
+                        <input id="bruttoValue" type="number" min="0" value="0" oninput="validity.valid||(value='');">
                     </form>
                 </div>
 
