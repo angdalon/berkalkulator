@@ -18,7 +18,7 @@ let calcNetto = () => {
 
 
 let calcValues = () => {
-    if(document.forms["testForm"]["bruttoValue"].value != "") {
+    if(document.forms["testForm"]["bruttoValue"].value != "" && document.forms["testForm"]["bruttoValue"].value > 0	) {
 
         $('#nettoValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.665)) + " Ft");
         $('#osszkoltsegValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(1.17)) + " Ft");
