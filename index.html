@@ -13,9 +13,9 @@
             <h2>Bérkalkulátor 2021</h2>
             <div>
                 <div class="styld">
-                    <form  class="checkboxFlex" id="testForm" oninput="calcValues()">
+                    <form  class="checkboxFlex" id="bruttoInputForm" oninput="calcValues()">
                         <label for="bruttoValue">Bruttó</label>
-                        <input id="bruttoValue" type="number" min="0" value="0" oninput="validity.valid||(value='');">
+                        <input id="bruttoValue"  type="number" min="0" value="0" oninput="validity.valid||(value='');">
                     </form>
                 </div>
 
@@ -23,18 +23,31 @@
 
                 <div class="checkboxFlex styld">
                     <p>Nettó</p>
-                    <p id="nettoValue">0 Ft</p>
+                    <p class="calculated" id="nettoValue">0 Ft</p>
                 </div>
                 
                 
                 <div class="checkboxFlex styld">
-                    <p>Össz. költség</p>
-                    <p id="osszkoltsegValue">0 Ft</p>
+                    <p>Teljes bérköltség</p>
+                    <p class="calculated" id="osszkoltsegValue">0 Ft</p>
                 </div>
             </div>
             <hr>
             <div class="checkboxFlex styld">
                 <p>Gyermekek száma</p>
+                <form class="checkboxFlex" id="numberOfChildrenForm">
+                    <input type="radio" id="childNumZero" name="numberOfChildren" value="0" checked="checked">
+                    <label for="childNumZero">0</label>
+                    <input type="radio" id="childNumOne" name="numberOfChildren" value="1">
+                    <label for="childNumOne">1</label>
+                    <input type="radio" id="childNumTwo" name="numberOfChildren" value="2">
+                    <label for="childNumTwo">2</label>
+                    <input type="radio" id="childNumThree" name="numberOfChildren" value="3">
+                    <label for="childNumThree">3</label>
+                    <input type="radio" id="childNumFourplus" name="numberOfChildren" value="4">
+                    <label for="childNumFourplus">4 vagy több</label>
+                </form>
+                
             </div>
             <hr>
             <div class="checkboxFlex styld">
@@ -69,59 +82,59 @@
             <h2>Munkavállalói oldal</h2>
             <div class="checkboxFlex styld">
                 <p>Havi bruttó jövedelem</p>
-                <p id="havibruttoValue">0 Ft</p>
+                <p class="calculated" id="havibruttoValue">0 Ft</p>
             </div>
             <hr>
             <div class="checkboxFlex styld">
                 <p>Személyi jövedelemadó</p>
-                <p id="szjaValue">0 Ft</p>
+                <p class="calculated" id="szjaValue">0 Ft</p>
             </div>
             <hr>
             <div class="checkboxFlex styld">
                 <p>Társadalombiztosítási járulék</p>
-                <p id="tbValue">0 Ft</p>
+                <p class="calculated" id="tbValue">0 Ft</p>
             </div>
             <hr>
             <div class="checkboxFlex styld">
                 <p>Munkavállalói levonások összesen</p>
-                <p id="munkavallaloiadokValue">0 Ft</p>
+                <p class="calculated" id="munkavallaloiadokValue">0 Ft</p>
             </div>
             <hr>
             <div class="checkboxFlex styld">
                 <p>Éves számított adóalap</p>
-                <p id="evesadoalapValue">0 Ft</p>
+                <p class="calculated" id="evesadoalapValue">0 Ft</p>
             </div>
             <hr>
             <div class="checkboxFlex styld">
                 <p>Éves számított adó</p>
-                <p id="evesszamitottadoValue">0 Ft</p>
+                <p class="calculated" id="evesszamitottadoValue">0 Ft</p>
             </div>
         </section>
         <section id="sectionC">
             <h2>Munkáltatói oldal</h2>
             <div class="checkboxFlex styld">
                 <p>Munkáltató össz. bérköltsége</p>
-                <p id="osszberkoltsegValue">0 Ft</p>
+                <p class="calculated" id="osszberkoltsegValue">0 Ft</p>
             </div>
             <hr>
             <div class="checkboxFlex styld">
                 <p>Szociális hozzájárulási adó</p>
-                <p id="szochoValue">0 Ft</p>
+                <p class="calculated" id="szochoValue">0 Ft</p>
             </div>
             <hr>
             <div class="checkboxFlex styld">
                 <p>Szakképzési hozzájárulás</p>
-                <p id="szakkepzesiValue">0 Ft</p>
+                <p class="calculated" id="szakkepzesiValue">0 Ft</p>
             </div>
             <hr>
             <div class="checkboxFlex styld">
                 <p>Munkáltatói járulékok összesen</p>
-                <p id="munkaltatoijarulekokValue">0 Ft</p>
+                <p class="calculated" id="munkaltatoijarulekokValue">0 Ft</p>
             </div>
             <hr>
             <div class="checkboxFlex styld">
                 <p>Bruttó bér</p>
-                <p id="bruttoberValue">0 Ft</p>
+                <p class="calculated" id="bruttoberValue">0 Ft</p>
             </div>
         </section>
     </main>

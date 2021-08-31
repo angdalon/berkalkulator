@@ -43,8 +43,50 @@ main {
 }
 
 
+#bruttoValue {
+    color:rgba(143, 110, 49, 0.692);
+    background-color: azure;
+    text-align: right;
+    border: none;
+    font-size: 24px;
+    padding: 0px;
+    border-bottom: 2px solid rgba(143, 110, 49, 0.692);
+    width: 180px;
+}
 
+#bruttoValue:focus {
+    outline: none;
+    border-bottom-color: rgb(231, 150, 0);
+    color:rgb(231, 150, 0)
+}
 
+#numberOfChildrenForm {
+    padding: 5px 0px 0px 0px;
+}
+#numberOfChildrenForm input:hover, #numberOfChildrenForm label:hover {
+    cursor: pointer;
+}
+
+#numberOfChildrenForm input {
+    margin-left: 30px;
+    
+}
+
+/*
+#minusOneChild, #plusOneChild {
+    width: 18px;
+    height: 18px;
+    padding: 6px 6px 0px 6px;
+}
+
+#minusOneChild:hover, #plusOneChild:hover {
+    cursor: pointer;
+}
+
+#numberOfChildren {
+    font-size: 20px;
+}
+*/
 
 
 #sectionA hr, #sectionB hr, #sectionC hr {
