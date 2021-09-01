@@ -35,7 +35,7 @@
             <hr>
             <div class="checkboxFlex styld">
                 <p>Gyermekek száma</p>
-                <form class="checkboxFlex" id="numberOfChildrenForm">
+                <fieldset class="checkboxFlex" id="numberOfChildrenFieldset" onchange="calcValues()">
                     <input type="radio" id="childNumZero" name="numberOfChildren" value="0" checked="checked">
                     <label for="childNumZero">0</label>
                     <input type="radio" id="childNumOne" name="numberOfChildren" value="1">
@@ -46,12 +46,17 @@
                     <label for="childNumThree">3</label>
                     <input type="radio" id="childNumFourplus" name="numberOfChildren" value="4">
                     <label for="childNumFourplus">4 vagy több</label>
-                </form>
+                </fieldset>
                 
             </div>
             <hr>
             <div class="checkboxFlex styld">
                 <p>Kedvezmény</p>
+                <p class="calculated" id="kedvezmenyValue">0 Ft</p>
+            </div>
+            <div class="checkboxFlex styld">
+                <p>Megspórolható adó</p>
+                <p class="calculated" id="megsporolhatoValue">0 Ft</p>
             </div>
             <hr>
             <div class="checkboxFlex styld">

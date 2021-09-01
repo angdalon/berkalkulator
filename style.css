@@ -60,14 +60,15 @@ main {
     color:rgb(231, 150, 0)
 }
 
-#numberOfChildrenForm {
+#numberOfChildrenFieldset {
     padding: 5px 0px 0px 0px;
+    border: none;
 }
-#numberOfChildrenForm input:hover, #numberOfChildrenForm label:hover {
+#numberOfChildrenFieldset input:hover, #numberOfChildrenFieldset label:hover {
     cursor: pointer;
 }
 
-#numberOfChildrenForm input {
+#numberOfChildrenFieldset input {
     margin-left: 30px;
     
 }

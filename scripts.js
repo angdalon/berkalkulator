@@ -20,7 +20,7 @@ let calcNetto = () => {
 let calcValues = () => {
     if(document.forms["bruttoInputForm"]["bruttoValue"].value != "" && document.forms["bruttoInputForm"]["bruttoValue"].value > 0	) {
 
-        $('#nettoValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.665)) + " Ft");
+        $('#nettoValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.665)) + parseInt($("#megsporolhatoValue").text())  + " Ft");
         $('#osszkoltsegValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(1.17)) + " Ft");
         
         $('#havibruttoValue').text(parseInt(bruttoValue.value) + " Ft");
@@ -35,6 +35,36 @@ let calcValues = () => {
 }
 
 };
+
+$('#numberOfChildrenFieldset input:radio').on('change', function() {
+    let radioValue = $(this).val();
+
+    if (parseInt(radioValue) == 0) {
+        $("#kedvezmenyValue").text(0 + " Ft");
+        $("#megsporolhatoValue").text(0 + " Ft");
+        //$('#nettoValue').text(parseInt(parseInt($("#nettoValue").text()) + 10000) + " Ft");
+    } else if (parseInt(radioValue) == 1) {
+        $("#kedvezmenyValue").text(66670 + " Ft");
+        $("#megsporolhatoValue").text(10000 + " Ft");
+        
+    } else if (parseInt(radioValue) == 2) {
+        $("#kedvezmenyValue").text(133330 + " Ft");
+        $("#megsporolhatoValue").text(40000 + " Ft");
+    } else if (parseInt(radioValue) == 3) {
+        $("#kedvezmenyValue").text(220000 + " Ft");
+        $("#megsporolhatoValue").text(99000 + " Ft");
+    } else if (parseInt(radioValue) == 4) {
+        $("#kedvezmenyValue").text("??" + " Ft");
+        $("#megsporolhatoValue").text(132000 + " Ft");
+    };  
+});
+
+
+
+
+
+
+
 
 
 
