@@ -1,19 +1,9 @@
 
-// ez ok, de lehet felesleges ennyi variable
 /*
-let calcNetto = () => {
-    let nettoErtek = parseInt(bruttoValue.value)*parseFloat(0.665);
-    $('#nettoValue').text(nettoErtek + " Ft");
-};
-*/
-
-
-// no variable version
-
-/*
-let calcNetto = () => {
-    $('#nettoValue').text(parseInt(bruttoValue.value)*parseFloat(0.665) + " Ft");
-};
+let doAll = () => {
+    calcValues();
+    radioCalculation();
+}
 */
 
 
@@ -23,7 +13,28 @@ let calcValues = () => {
 
         $('#nettoValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.665)) + parseInt($("#megsporolhatoValue").text())  + " Ft");
         
+        if ($("#checkHazas").is(':checked')) {
+            $('#nettoValue').text(parseInt($('#nettoValue').text()) + 5000 + " Ft");
+
+        };
         
+        if ($("#checkFogyatekos").is(':checked')) {
+            $('#nettoValue').text(parseInt($('#nettoValue').text()) + 8370 + " Ft");
+        };
+        
+        if ($("#checkNyugdijas").is(':checked')) {
+            $('#nettoValue').text(parseInt($('#nettoValue').text()) + parseInt($('#tbValue').text()) + " Ft");
+        };
+
+
+
+        
+        if (parseInt($('#nettoValue').text()) > parseInt($('#bruttoValue').val())) {
+            $('#nettoValue').text($('#bruttoValue').val() + " Ft");
+        };
+        
+        
+
         $('#osszkoltsegValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(1.17)) + " Ft");
         
         $('#havibruttoValue').text(parseInt(bruttoValue.value) + " Ft");
