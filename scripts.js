@@ -17,8 +17,17 @@ let calcValues = () => {
         
         
         $('#havibruttoValue').text(parseInt(bruttoValue.value) + " Ft");
-        $('#szjaValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.15)) + " Ft");
+        $('#szjaValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.15)) - parseInt($("#megsporolhatoValue").text()) + " Ft");
+            
+        
+        
+
+        
+        
         $('#tbValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.185)) + " Ft");
+        
+        
+        
         
         $('#evesadoalapValue').text(parseInt(parseInt(bruttoValue.value)*12) + " Ft");
         $('#evesszamitottadoValue').text(parseInt(parseInt($("#szjaValue").text())*12) + " Ft");
@@ -39,13 +48,29 @@ let calcValues = () => {
         
         if ($("#checkHazas").is(':checked')) {
             $('#nettoValue').text(parseInt($('#nettoValue').text()) + 5000 + " Ft");
+            $('#szjaValue').text(parseInt($('#szjaValue').text()) - 5000 + " Ft");
 
         };
         
         if ($("#checkFogyatekos").is(':checked')) {
             $('#nettoValue').text(parseInt($('#nettoValue').text()) + 8370 + " Ft");
+            $('#szjaValue').text(parseInt($('#szjaValue').text()) - 8370 + " Ft");
+
         };
         
+        let taxDiff = $('#szjaValue').text();
+        if (parseInt(taxDiff) < 0) {
+            $('#szjaValue').text("0 Ft");
+            $('#tbValue').text(parseInt($('#tbValue').text()) + parseInt(taxDiff) + " Ft");
+            if (parseInt($('#tbValue').text()) < 0) {
+                $('#tbValue').text("0 Ft");
+            }
+        };
+
+        $('#evesszamitottadoValue').text(parseInt(parseInt($("#szjaValue").text())*12) + " Ft");
+
+
+
         if ($("#checkNyugdijas").is(':checked')) {
             $('#nettoValue').text(parseInt($('#nettoValue').text()) + parseInt($('#tbValue').text()) + " Ft");
             $('#tbValue').text("0 Ft");
