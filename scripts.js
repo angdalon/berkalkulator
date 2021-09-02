@@ -11,6 +11,30 @@ let doAll = () => {
 let calcValues = () => {
     if(document.forms["bruttoInputForm"]["bruttoValue"].value != "" && document.forms["bruttoInputForm"]["bruttoValue"].value > 0	) {
 
+        
+        
+
+        
+        
+        $('#havibruttoValue').text(parseInt(bruttoValue.value) + " Ft");
+        $('#szjaValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.15)) + " Ft");
+        $('#tbValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.185)) + " Ft");
+        
+        $('#evesadoalapValue').text(parseInt(parseInt(bruttoValue.value)*12) + " Ft");
+        $('#evesszamitottadoValue').text(parseInt(parseInt($("#szjaValue").text())*12) + " Ft");
+
+
+
+
+        $('#osszkoltsegValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(1.17)) + " Ft");
+        $('#osszberkoltsegValue').text($('#osszkoltsegValue').text());
+
+        $('#szochoValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.155)) + " Ft");
+        $('#szakkepzesiValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.015)) + " Ft");
+        $('#munkaltatoijarulekokValue').text(parseInt($('#szochoValue').text()) + parseInt($('#szakkepzesiValue').text()) + " Ft");
+        $('#bruttoberValue').text($('#havibruttoValue').text());
+        
+
         $('#nettoValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.665)) + parseInt($("#megsporolhatoValue").text())  + " Ft");
         
         if ($("#checkHazas").is(':checked')) {
@@ -24,6 +48,13 @@ let calcValues = () => {
         
         if ($("#checkNyugdijas").is(':checked')) {
             $('#nettoValue').text(parseInt($('#nettoValue').text()) + parseInt($('#tbValue').text()) + " Ft");
+            $('#tbValue').text("0 Ft");
+            $('#osszkoltsegValue').text($('#havibruttoValue').text())
+            $('#osszberkoltsegValue').text($('#osszkoltsegValue').text());
+            $('#szochoValue').text("0 Ft");
+            $('#szakkepzesiValue').text("0 Ft");
+            $('#munkaltatoijarulekokValue').text("0 Ft");
+
         };
 
 
@@ -33,16 +64,12 @@ let calcValues = () => {
             $('#nettoValue').text($('#bruttoValue').val() + " Ft");
         };
         
-        
-
-        $('#osszkoltsegValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(1.17)) + " Ft");
-        
-        $('#havibruttoValue').text(parseInt(bruttoValue.value) + " Ft");
-        $('#szjaValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.15)) + " Ft");
-        $('#tbValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.185)) + " Ft");
         $('#munkavallaloiadokValue').text(parseInt($("#szjaValue").text())+parseInt($("#tbValue").text()) + " Ft");
-        $('#evesadoalapValue').text(parseInt(parseInt(bruttoValue.value)*12) + " Ft");
-        $('#evesszamitottadoValue').text(parseInt(parseInt($("#szjaValue").text())*12) + " Ft");
+
+
+
+
+
     } else {
         $(".calculated").text("0 Ft");
        
@@ -63,15 +90,15 @@ let radioCalculation = (radioValue) =>  {
         $("#megsporolhatoValue").text(10000 + " Ft");
         break;
     } case 2: {
-        $("#kedvezmenyValue").text(133330 + " Ft");
+        $("#kedvezmenyValue").text(2 * 133330 + " Ft");
         $("#megsporolhatoValue").text(40000 + " Ft");
         break;
     } case 3: {
-        $("#kedvezmenyValue").text(220000 + " Ft");
+        $("#kedvezmenyValue").text(3 * 220000 + " Ft");
         $("#megsporolhatoValue").text(99000 + " Ft");
         break;
     } case 4: {
-        $("#kedvezmenyValue").text("??" + " Ft");
+        $("#kedvezmenyValue").text(4 * 220000 + " Ft");
         $("#megsporolhatoValue").text(132000 + " Ft");
         break;
     } default: {
