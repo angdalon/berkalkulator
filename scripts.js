@@ -1,39 +1,13 @@
-
-/*
-let doAll = () => {
-    calcValues();
-    radioCalculation();
-}
-*/
-
-
-
 let calcValues = () => {
     if(document.forms["bruttoInputForm"]["bruttoValue"].value != "" && document.forms["bruttoInputForm"]["bruttoValue"].value > 0	) {
-
-        
-        
-
-        
         
         $('#havibruttoValue').text(parseInt(bruttoValue.value) + " Ft");
         $('#szjaValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.15)) - parseInt($("#megsporolhatoValue").text()) + " Ft");
-            
-        
-        
-
-        
         
         $('#tbValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.185)) + " Ft");
         
-        
-        
-        
         $('#evesadoalapValue').text(parseInt(parseInt(bruttoValue.value)*12) + " Ft");
         $('#evesszamitottadoValue').text(parseInt(parseInt($("#szjaValue").text())*12) + " Ft");
-
-
-
 
         $('#osszkoltsegValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(1.17)) + " Ft");
         $('#osszberkoltsegValue').text($('#osszkoltsegValue').text());
@@ -92,9 +66,6 @@ let calcValues = () => {
         $('#munkavallaloiadokValue').text(parseInt($("#szjaValue").text())+parseInt($("#tbValue").text()) + " Ft");
 
 
-
-
-
     } else {
         $(".calculated").text("0 Ft");
        
@@ -144,45 +115,30 @@ $('#numberOfChildrenForm input').on('input', function() {
 
 
 
+$('#minusOneChild').on('click', () => {
+    let cChildNum = parseInt($('#childNumCurrent').val());
+    if (parseInt(cChildNum) > 0) {
+    let newChildNum = parseInt(cChildNum) - 1;
+    $('#childNumCurrent').val(newChildNum);
+    radioCalculation(newChildNum);
+    calcValues();
+    };
+});
 
-/*
 $('#plusOneChild').on('click', () => {
-    if(parseInt($('#numberOfChildren').text() = 0)) {
-        let currentChildNum = parseInt($('#numberOfChildren').text());
-        $('#numberOfChildren').text(currentChildNum + 1);
-    }
-    
-    
+    let cChildNum = parseInt($('#childNumCurrent').val());
+    if (parseInt(cChildNum) < 10) {
+    let newChildNum = parseInt(cChildNum) + 1;
+    $('#childNumCurrent').val(newChildNum);
+    radioCalculation(newChildNum);
+    calcValues();
+    } else if ($('#childNumCurrent').val() == false) {
+    $('#childNumCurrent').val(1);
+    radioCalculation(1);
+    calcValues();
+    };
 });
 
-$('#minusOneChild').on('click', () => {
-    let currentChildNum = parseInt($('#numberOfChildren').text());
-    $('#numberOfChildren').text(currentChildNum - 1);
-});
-*/
-
-/*
-if($('#numberOfChildren').val() < 10) {
-    $('#plusOneChild').on('click', () => {
-        let currentChildNum = parseInt($('#numberOfChildren').val());
-        $('#numberOfChildren').val(currentChildNum + 1);
-    });
-}
-
-$('#minusOneChild').on('click', () => {
-    let currentChildNum = parseInt($('#numberOfChildren').val());
-    $('#numberOfChildren').val(currentChildNum - 1);
-});
-
-<div class="checkboxFlex">
-                    <img src=images/minus_sign.svg alt="minusOne" id="minusOneChild">
-                    <input id="numberOfChildren" type="number" min="0" value="0" oninput="validity.valid||(value='');" >
-                    <img src=images/plus_sign.svg alt="plusOne" id="plusOneChild">
-                </div>
-
-
-
-*/
 
 
 
@@ -200,23 +156,6 @@ $('#minusOneChild').on('click', () => {
 
 
 
-/*
-
-    else {
-        $("#bruttoValue").val(0);
-        
-   
-}
-*/
 
 
-/*
-if ($("#checkHazas").is(':checked')) {
-    console.log("valami")
-}
-
-if($("#checkHazas").checked == true) {
-    console.log("valami");
-}
-*/
 

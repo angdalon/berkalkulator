@@ -32,9 +32,12 @@
             <hr>
             <div class="styld">
 
-                <form class="checkboxFlex" id="numberOfChildrenForm" oninput="calcValues()">
-                    <label class="fixpos" for="childNumCurrent">Gyermekek száma</label>
+                
+                <form class=" fFlex" id="numberOfChildrenForm" oninput="calcValues()">
+                    <label id="childNumLabel" for="childNumCurrent">Gyermekek száma</label>
+                    <img src="images/minus_sign.svg" id="minusOneChild" alt="minuszEgy">
                     <input id="childNumCurrent" type="number" min="0" max="10" value="0" oninput="validity.valid||(value='');">
+                    <img src="images/plus_sign.svg" id="plusOneChild" alt="pluszEgy">
                 </form>
 
             </div>

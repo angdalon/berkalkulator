@@ -60,6 +60,11 @@ main {
     font-weight: 600;
 }
 
+#bruttoValue::-webkit-inner-spin-button {
+    display: none;
+}
+
+
 #bruttoValue:focus, #childNumCurrent:focus {
     outline: none;
     border-bottom-color: rgb(231, 150, 0);
@@ -75,12 +80,16 @@ main {
     font-size: 20px;
     padding: 0px;
     border-bottom: 2px solid rgba(143, 110, 49, 0.692);
-    width: 50px;
+    width: 25px;
     font-weight: 600;
 }
 
 
 
+
+#childNumCurrent::-webkit-inner-spin-button {
+    display: none;
+}
 
 /*
 #numberOfChildrenFieldset {
@@ -97,22 +106,43 @@ main {
 }
 */
 
+.fFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
 
-/*
+}
+
+#childNumLabel {
+    flex-grow: 1;
+}
+
+
 #minusOneChild, #plusOneChild {
     width: 18px;
     height: 18px;
-    padding: 6px 6px 0px 6px;
+    opacity: 0.5;
+
+}
+
+#minusOneChild {
+    padding: 4px 6px 0px 6px;
+}
+
+#plusOneChild {
+    padding: 4px 0px 0px 10px;
 }
 
 #minusOneChild:hover, #plusOneChild:hover {
     cursor: pointer;
 }
 
-#numberOfChildren {
-    font-size: 20px;
-}
-*/
+
+
+
+
+
 
 
 #sectionA hr, #sectionB hr, #sectionC hr {
