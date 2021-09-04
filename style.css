@@ -11,7 +11,7 @@ main {
 }
 
 #sectionA, #sectionB, #sectionC {
-    width: 700px;
+    width: 600px;
     height: 750px;
     text-align: center;
     border: 5px solid grey;
@@ -32,6 +32,9 @@ main {
 
 }
 
+.fixpos {
+    position: absolute;
+}
 
 
 .styld {
@@ -57,12 +60,29 @@ main {
     font-weight: 600;
 }
 
-#bruttoValue:focus {
+#bruttoValue:focus, #childNumCurrent:focus {
     outline: none;
     border-bottom-color: rgb(231, 150, 0);
     color:rgb(231, 150, 0)
 }
 
+
+#childNumCurrent {
+    color:rgba(143, 110, 49, 0.692);
+    background-color: azure;
+    text-align:end;
+    border: none;
+    font-size: 20px;
+    padding: 0px;
+    border-bottom: 2px solid rgba(143, 110, 49, 0.692);
+    width: 50px;
+    font-weight: 600;
+}
+
+
+
+
+/*
 #numberOfChildrenFieldset {
     padding: 5px 0px 0px 0px;
     border: none;
@@ -75,6 +95,8 @@ main {
     margin-left: 30px;
     
 }
+*/
+
 
 /*
 #minusOneChild, #plusOneChild {

@@ -103,12 +103,12 @@ let calcValues = () => {
 };
 
 
-let radioCalculation = (radioValue) =>  {
-    switch (parseInt(radioValue)) {
+let radioCalculation = (childInputValue) =>  {
+    if (parseInt(childInputValue) < 5) 
+    {switch (parseInt(childInputValue)) {
     case 0: {
         $("#kedvezmenyValue").text(0 + " Ft");
         $("#megsporolhatoValue").text(0 + " Ft");
-        //$('#nettoValue').text(parseInt(parseInt($("#nettoValue").text()) + 10000) + " Ft");
         break;
     } case 1: {
         $("#kedvezmenyValue").text(66670 + " Ft");
@@ -127,17 +127,20 @@ let radioCalculation = (radioValue) =>  {
         $("#megsporolhatoValue").text(132000 + " Ft");
         break;
     } default: {
-        console.log(parseInt(radioValue));
+        $("#kedvezmenyValue").text(0 + " Ft");
+        $("#megsporolhatoValue").text(0 + " Ft");
     }
-    };   
+    };
+    } else {
+        $("#kedvezmenyValue").text(childInputValue * 220000 + " Ft");
+        $("#megsporolhatoValue").text(childInputValue * 33000 + " Ft");
+    };
 };
 
-$('#numberOfChildrenFieldset input:radio').on('change', function() {
-    let rV = $(this).val();
-    radioCalculation(rV);
+$('#numberOfChildrenForm input').on('input', function() {
+    let childInputV = $(this).val();
+    radioCalculation(childInputV);
 });
-
-
 
 
 

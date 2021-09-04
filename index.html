@@ -19,13 +19,10 @@
                     </form>
                 </div>
 
-
-
                 <div class="checkboxFlex styld">
                     <p>Nettó</p>
                     <p class="calculated" id="nettoValue">0 Ft</p>
                 </div>
-                
                 
                 <div class="checkboxFlex styld">
                     <p>Teljes bérköltség</p>
@@ -33,21 +30,13 @@
                 </div>
             </div>
             <hr>
-            <div class="checkboxFlex styld">
-                <p>Gyermekek száma</p>
-                <fieldset class="checkboxFlex" id="numberOfChildrenFieldset" onchange="calcValues()">
-                    <input type="radio" id="childNumZero" name="numberOfChildren" value="0" checked="checked">
-                    <label for="childNumZero">0</label>
-                    <input type="radio" id="childNumOne" name="numberOfChildren" value="1">
-                    <label for="childNumOne">1</label>
-                    <input type="radio" id="childNumTwo" name="numberOfChildren" value="2">
-                    <label for="childNumTwo">2</label>
-                    <input type="radio" id="childNumThree" name="numberOfChildren" value="3">
-                    <label for="childNumThree">3</label>
-                    <input type="radio" id="childNumFour" name="numberOfChildren" value="4">
-                    <label for="childNumFour">4</label>
-                </fieldset>
-                
+            <div class="styld">
+
+                <form class="checkboxFlex" id="numberOfChildrenForm" oninput="calcValues()">
+                    <label class="fixpos" for="childNumCurrent">Gyermekek száma</label>
+                    <input id="childNumCurrent" type="number" min="0" max="10" value="0" oninput="validity.valid||(value='');">
+                </form>
+
             </div>
             <hr>
             <div class="checkboxFlex styld">
