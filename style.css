@@ -85,26 +85,11 @@ main {
 }
 
 
-
-
 #childNumCurrent::-webkit-inner-spin-button {
     display: none;
 }
 
-/*
-#numberOfChildrenFieldset {
-    padding: 5px 0px 0px 0px;
-    border: none;
-}
-#numberOfChildrenFieldset input:hover, #numberOfChildrenFieldset label:hover {
-    cursor: pointer;
-}
 
-#numberOfChildrenFieldset input {
-    margin-left: 30px;
-    
-}
-*/
 
 .fFlex {
     display: flex;
@@ -137,12 +122,6 @@ main {
 #minusOneChild:hover, #plusOneChild:hover {
     cursor: pointer;
 }
-
-
-
-
-
-
 
 
 #sectionA hr, #sectionB hr, #sectionC hr {

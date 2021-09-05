@@ -1,24 +1,32 @@
+
+
+
+
+
+
+
 let calcValues = () => {
     if(document.forms["bruttoInputForm"]["bruttoValue"].value != "" && document.forms["bruttoInputForm"]["bruttoValue"].value > 0	) {
+        const beirtBrutto = parseInt(bruttoValue.value);
+
+        $('#havibruttoValue').text(beirtBrutto + " Ft");
+        $('#szjaValue').text(parseInt(beirtBrutto*parseFloat(0.15)) - parseInt($("#megsporolhatoValue").text()) + " Ft");
         
-        $('#havibruttoValue').text(parseInt(bruttoValue.value) + " Ft");
-        $('#szjaValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.15)) - parseInt($("#megsporolhatoValue").text()) + " Ft");
+        $('#tbValue').text(parseInt(beirtBrutto*parseFloat(0.185)) + " Ft");
         
-        $('#tbValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.185)) + " Ft");
-        
-        $('#evesadoalapValue').text(parseInt(parseInt(bruttoValue.value)*12) + " Ft");
+        $('#evesadoalapValue').text(parseInt(beirtBrutto*12) + " Ft");
         $('#evesszamitottadoValue').text(parseInt(parseInt($("#szjaValue").text())*12) + " Ft");
 
-        $('#osszkoltsegValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(1.17)) + " Ft");
+        $('#osszkoltsegValue').text(parseInt(beirtBrutto*parseFloat(1.17)) + " Ft");
         $('#osszberkoltsegValue').text($('#osszkoltsegValue').text());
 
-        $('#szochoValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.155)) + " Ft");
-        $('#szakkepzesiValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.015)) + " Ft");
+        $('#szochoValue').text(parseInt(beirtBrutto*parseFloat(0.155)) + " Ft");
+        $('#szakkepzesiValue').text(parseInt(beirtBrutto*parseFloat(0.015)) + " Ft");
         $('#munkaltatoijarulekokValue').text(parseInt($('#szochoValue').text()) + parseInt($('#szakkepzesiValue').text()) + " Ft");
         $('#bruttoberValue').text($('#havibruttoValue').text());
         
 
-        $('#nettoValue').text(parseInt(parseInt(bruttoValue.value)*parseFloat(0.665)) + parseInt($("#megsporolhatoValue").text())  + " Ft");
+        $('#nettoValue').text(parseInt(beirtBrutto*parseFloat(0.665)) + parseInt($("#megsporolhatoValue").text())  + " Ft");
         
         if ($("#checkHazas").is(':checked')) {
             $('#nettoValue').text(parseInt($('#nettoValue').text()) + 5000 + " Ft");
@@ -75,8 +83,7 @@ let calcValues = () => {
 
 
 let radioCalculation = (childInputValue) =>  {
-    if (parseInt(childInputValue) < 5) 
-    {switch (parseInt(childInputValue)) {
+    switch (parseInt(childInputValue)) {
     case 0: {
         $("#kedvezmenyValue").text(0 + " Ft");
         $("#megsporolhatoValue").text(0 + " Ft");
@@ -102,11 +109,12 @@ let radioCalculation = (childInputValue) =>  {
         $("#megsporolhatoValue").text(0 + " Ft");
     }
     };
-    } else {
+    if (parseInt(childInputValue) > 4)  {
         $("#kedvezmenyValue").text(childInputValue * 220000 + " Ft");
         $("#megsporolhatoValue").text(childInputValue * 33000 + " Ft");
     };
 };
+
 
 $('#numberOfChildrenForm input').on('input', function() {
     let childInputV = $(this).val();
