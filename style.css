@@ -28,7 +28,7 @@ main {
 #sectionA h2, #sectionB h2, #sectionC h2 {
     padding: 50px 0px;
     font-size: 35px;
-    color:rgba(143, 110, 49, 0.692);
+    color:#655110;
 
 }
 
@@ -40,7 +40,7 @@ main {
 .styld {
     text-align: left;
     font-size: 20px;
-    color:rgba(143, 110, 49, 0.692);
+    color:#655110;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 2px;
@@ -49,13 +49,13 @@ main {
 
 
 #bruttoValue {
-    color:rgba(143, 110, 49, 0.692);
+    color:#655110;
     background-color: azure;
     text-align: right;
     border: none;
     font-size: 20px;
     padding: 0px;
-    border-bottom: 2px solid rgba(143, 110, 49, 0.692);
+    border-bottom: 2px solid #655110;
     width: 180px;
     font-weight: 600;
 }
@@ -67,19 +67,19 @@ main {
 
 #bruttoValue:focus, #childNumCurrent:focus {
     outline: none;
-    border-bottom-color: rgb(231, 150, 0);
-    color:rgb(231, 150, 0)
+    border-bottom-color: #0E0AEB;
+    color:#0E0AEB
 }
 
 
 #childNumCurrent {
-    color:rgba(143, 110, 49, 0.692);
+    color:#655110;
     background-color: azure;
     text-align:end;
     border: none;
     font-size: 20px;
     padding: 0px;
-    border-bottom: 2px solid rgba(143, 110, 49, 0.692);
+    border-bottom: 2px solid #655110;
     width: 25px;
     font-weight: 600;
 }
@@ -125,7 +125,7 @@ main {
 
 
 #sectionA hr, #sectionB hr, #sectionC hr {
-    border-bottom: 1px solid rgba(143, 110, 49, 0.692);
+    border-bottom: 1px solid #655110;
     width: 90%;
 }
 
