@@ -32,9 +32,6 @@ main {
 
 }
 
-.fixpos {
-    position: absolute;
-}
 
 
 .styld {
@@ -68,7 +65,7 @@ main {
 #bruttoValue:focus, #childNumCurrent:focus {
     outline: none;
     border-bottom-color: #0E0AEB;
-    color:#0E0AEB
+    color:#0E0AEB;
 }
 
 

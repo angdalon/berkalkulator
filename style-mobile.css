@@ -1,0 +1,200 @@
+body {
+    background-color: rgba(199, 192, 192, 0.664);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sectionA, #sectionB, #sectionC {
+    width: 305px;
+    text-align: center;
+    border: 5px solid grey;
+    border-radius: 40px;
+    margin: 25px 0px;
+    background-color: azure;
+
+}
+
+#sectionA p, #sectionB p, #sectionC p {
+    margin: 3px 0px;
+}
+
+#sectionA h2, #sectionB h2, #sectionC h2 {
+    padding: 40px 17px 15px 17px;
+    font-size: 35px;
+    text-align: center;
+    color: #655110;
+
+}
+
+.styld {
+    text-align: center;
+    font-size: 20px;
+    color:#655110;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+#bruttoValue {
+    color:#655110;
+    background-color: azure;
+    text-align: center;
+    border: none;
+    font-size: 25px;
+    padding: 0px;
+    border-bottom: 2px solid rgb(187,196,204);
+    width: 180px;
+    font-weight: 600;
+}
+
+#bruttoValue::-webkit-inner-spin-button {
+    display: none;
+}
+
+
+#bruttoValue:focus, #childNumCurrent:focus {
+    outline: none;
+    border-bottom-color: #0E0AEB;
+    color:#0E0AEB;
+}
+
+
+#childNumCurrent {
+    color: #655110;
+    background-color: azure;
+    text-align:end;
+    border: none;
+    font-size: 23px;
+    padding: 0px;
+    border-bottom: 2px solid rgb(187,196,204);
+    width: 25px;
+    font-weight: 600;
+}
+
+
+#childNumCurrent::-webkit-inner-spin-button {
+    display: none;
+}
+
+
+
+.fFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+
+}
+
+#childNumLabel {
+    flex-grow: 1;
+}
+
+
+#minusOneChild, #plusOneChild {
+    width: 25px;
+    height: 25px;
+    opacity: 0.5;
+
+}
+
+#minusOneChild {
+    padding: 6px 6px 0px 6px;
+    position: relative;
+    top: 5px;
+}
+
+#plusOneChild {
+    padding: 6px 0px 0px 10px;
+    position: relative;
+    top: 5px;
+    left: 4px;
+}
+
+#minusOneChild:hover, #plusOneChild:hover {
+    cursor: pointer;
+}
+
+
+#sectionA hr, #sectionB hr, #sectionC hr {
+    border-bottom: 1px solid rgb(187,196,204);
+    width: 90%;
+}
+
+
+.checkboxFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 28px;
+    margin: 4px 0px 0px 0px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

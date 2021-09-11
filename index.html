@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <title>Bérkalkulátor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(min-width: 620px)" href="style-normal.css">
+    <link rel="stylesheet"  media="(max-width: 620px)"href="style-mobile.css">
 </head>
 <body>
     <main>
@@ -74,6 +75,7 @@
                     <span class="slider round"></span>
                 </label>
             </div>
+            <br>
         </section>
         <section id="sectionB">
             <h2>Munkavállalói oldal</h2>
@@ -106,6 +108,7 @@
                 <p>Éves számított adó</p>
                 <p class="calculated" id="evesszamitottadoValue">0 Ft</p>
             </div>
+            <br>
         </section>
         <section id="sectionC">
             <h2>Munkáltatói oldal</h2>
@@ -133,6 +136,7 @@
                 <p>Bruttó bér</p>
                 <p class="calculated" id="bruttoberValue">0 Ft</p>
             </div>
+            <br>
         </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
